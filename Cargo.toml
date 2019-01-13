@@ -1,0 +1,17 @@
+[package]
+name = "rust-book"
+version = "0.1.0"
+authors = ["Ely De La Cruz <elycruz@elycruz.com>"]
+edition = "2018"
+
+[[bin]]
+name = "rust-book"
+path = "src/main.rs"
+
+[[bin]]
+name = "chp2_00"
+path = "src/chp2_00/guessing_game.rs"
+
+[dependencies]
+rand = "0.4.0"
+regex = "1"
