@@ -6,7 +6,10 @@ use rand::Rng;
 
 extern crate regex;
 
+mod guessing_game_lib;
+
 use regex::Regex;
+use guessing_game_lib::*;
 
 static ALLOWED_NUM_GUESSES: i32 = 3;
 
@@ -23,32 +26,21 @@ fn ask_for_guess (re: &Regex) -> String {
 fn ask_play_again (yes_no_regex: &Regex) -> bool {
     let mut is_valid_rslt = false;
     let mut answer = String::new();
-    let mut slice = "";
+    let slice = "";
     while !is_valid_rslt {
         println!("Play again (y/n)?(y)");
         io::stdin().read_line(&mut answer)
             .expect("Failed to read line");
-        answer = answer.trim().to_lowercase();
-        slice = answer.as_str();
-        is_valid_rslt = match slice {
-            "y" | "n" | "" => true,
-            _ => false
-        };
+        is_valid_rslt = is_yes_no_char(&answer);
         if !is_valid_rslt {
             println!("Please enter only 'y' or 'n' for 'yes' and/or 'no':");
         }
     }
-    slice = if slice == "" { "y" } else { slice };
-    slice == "y"
-}
-
-fn normalize_guess(g: String) -> i32 {
-    let num: i32 = g.trim().parse().expect("Please enter a number:");
-    return num;
+    yes_no_to_bool(slice)
 }
 
 fn get_guess(re: &Regex) -> i32 {
-    normalize_guess(
+    normalize_num_guess(
         ask_for_guess(re)
     )
 }
@@ -87,3 +79,4 @@ fn main () {
         quit_game = ask_play_again(yes_no_regex);
     }
 }
+
