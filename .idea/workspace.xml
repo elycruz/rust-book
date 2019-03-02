@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="27fb374e-f3b1-4fda-ba26-9b3299f1e1bd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/chp2_00/guessing_game_lib.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chp2_00/tests/test_guessing_game_lib.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/chp2_00/guessing_game.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/chp2_00/guessing_game.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chp2_00/guessing_game_lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/chp2_00/guessing_game_lib.rs" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,53 +18,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/chp2_00/guessing_game.rs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="25" column="49" selection-start-line="25" selection-start-column="49" selection-end-line="25" selection-end-column="49" />
-              <folding>
-                <element signature="e#0#12#0" />
-                <element signature="e#109#126#0" />
-                <element signature="e#208#220#0" />
-                <element signature="n#!!block;n#ask_for_guess#0" />
-                <element signature="e#307#446#0" />
-                <element signature="e#503#525#0" />
-                <element signature="n#!!block;n#ask_play_again#0" />
-                <element signature="e#627#927#0" />
-                <element signature="e#833#921#0" />
-                <element signature="e#1097#1109#0" />
-                <element signature="n#!!block;n#get_guess#0" />
-                <element signature="e#1187#1206#0" />
-                <element signature="n#!!block;n#play_game#0" />
-                <element signature="e#1477#1922#0" />
-                <element signature="e#1592#1763#0" />
-                <element signature="n#!!block;n#main#0" />
-                <element signature="e#2035#2100#0" />
-                <element signature="e#2170#2235#0" />
-                <element signature="e#2266#2353#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/chp2_00/tests/test_guessing_game_lib.rs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="12" lean-forward="true" selection-start-column="12" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/chp2_00/guessing_game_lib.rs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="116">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-              <folding>
-                <element signature="e#52#53#0" expanded="true" />
-                <element signature="e#83#84#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="290">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
@@ -99,6 +55,9 @@
       <find>yes_no_to_bool</find>
       <find>pub</find>
       <find>yes_no_regex</find>
+      <find>yes_no_</find>
+      <find>.0</find>
+      <find>You guessed</find>
     </findStrings>
     <replaceStrings>
       <replace>&amp;mut</replace>
@@ -118,24 +77,24 @@
         <option value="$PROJECT_DIR$/src/chp2_00/guessing_game.unit.test.rs" />
         <option value="$PROJECT_DIR$/src/chp2_00/unit.test.rs" />
         <option value="$PROJECT_DIR$/src/chp2_00/guessing_game_unit_tests.rs" />
-        <option value="$PROJECT_DIR$/src/chp2_00/guessing_game_lib.rs" />
-        <option value="$PROJECT_DIR$/src/chp2_00/guessing_game.rs" />
         <option value="$PROJECT_DIR$/src/chp2_00/tests/guessing_game_lib_tests.rs" />
         <option value="$PROJECT_DIR$/src/chp2_00/tests/test_guessing_game_lib.rs" />
+        <option value="$PROJECT_DIR$/src/chp2_00/guessing_game_lib.rs" />
+        <option value="$PROJECT_DIR$/src/chp2_00/guessing_game.rs" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-10" />
-    <option name="width" value="1942" />
-    <option name="height" value="2172" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-146" />
+    <option name="y" value="-40" />
+    <option name="width" value="1946" />
+    <option name="height" value="1462" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -165,11 +124,12 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../technorama/technorama-remodeling.com-2018-front" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="org.rust.cargo.project.model.PROJECT_DISCOVERY" value="true" />
@@ -208,18 +168,21 @@
       <workItem from="1547316514289" duration="1006000" />
       <workItem from="1547353188094" duration="5900000" />
       <workItem from="1547926667298" duration="31000" />
-      <workItem from="1549820686060" duration="7317000" />
+      <workItem from="1549820686060" duration="7601000" />
+      <workItem from="1550024177376" duration="116000" />
+      <workItem from="1550369982077" duration="270000" />
+      <workItem from="1551554009144" duration="8113000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29832000" />
+    <option name="totallyTimeSpent" value="38615000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-5" y="0" width="971" height="1086" extended-state="0" />
+    <frame x="-6" y="-6" width="1933" height="1093" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2354874" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.08906667" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -231,7 +194,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.33696836" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.46521288" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -239,7 +202,7 @@
       <window_info anchor="right" id="Cargo" order="3" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2354874" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.08906667" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -251,7 +214,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.33696836" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.46521288" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -304,7 +267,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main.rs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
+        <state relative-caret-position="56">
           <caret line="2" selection-start-line="2" selection-end-line="2" />
           <folding>
             <element signature="e#10#11#0" expanded="true" />
@@ -314,47 +277,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/chp2_00/tests/test_guessing_game_lib.rs">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="12" lean-forward="true" selection-start-column="12" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/chp2_00/guessing_game_lib.rs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-          <folding>
-            <element signature="e#52#53#0" expanded="true" />
-            <element signature="e#83#84#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="291">
+          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/chp2_00/guessing_game.rs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="348">
-          <caret line="25" column="49" selection-start-line="25" selection-start-column="49" selection-end-line="25" selection-end-column="49" />
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
           <folding>
             <element signature="e#0#12#0" />
-            <element signature="e#109#126#0" />
-            <element signature="e#208#220#0" />
-            <element signature="n#!!block;n#ask_for_guess#0" />
-            <element signature="e#307#446#0" />
-            <element signature="e#503#525#0" />
-            <element signature="n#!!block;n#ask_play_again#0" />
-            <element signature="e#627#927#0" />
-            <element signature="e#833#921#0" />
-            <element signature="e#1097#1109#0" />
-            <element signature="n#!!block;n#get_guess#0" />
-            <element signature="e#1187#1206#0" />
-            <element signature="n#!!block;n#play_game#0" />
-            <element signature="e#1477#1922#0" />
-            <element signature="e#1592#1763#0" />
-            <element signature="n#!!block;n#main#0" />
-            <element signature="e#2035#2100#0" />
-            <element signature="e#2170#2235#0" />
-            <element signature="e#2266#2353#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/chp2_00/guessing_game_lib.rs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>

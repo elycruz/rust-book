@@ -1,20 +1,22 @@
-pub fn string_to_yes_no_char(xs: &String) -> String {
-    xs.trim().to_lowercase()
+pub fn to_yes_no_char_option(xs: &String) -> Option<char> {
+    xs.trim().to_lowercase().as_str().chars().next()
 }
 
-pub fn is_yes_no_char(xs: &String) -> bool {
-    let answer = string_to_yes_no_char(xs);
-    let slice: &str = answer.as_str();
-    match slice {
-        "y" | "n" | "" => true,
-        _ => false
+pub fn starts_with_yes_no_char(xs: &String) -> (bool, char) {
+    let chr = to_yes_no_char_option(xs);
+    match chr {
+        Some(x) => match x {
+            'y' | 'n' => (true, x),
+            _ => (false, x),
+        }
+        None => (true, ' ')
     }
 }
 
-pub fn yes_no_to_bool(xs: &str) -> bool {
-    match xs {
-        "y" | "" => true,
-        "n" | _ => false
+pub fn yes_no_to_bool(c: char) -> bool {
+    match c {
+        'y' | ' ' => true,
+        _ => false
     }
 }
 
