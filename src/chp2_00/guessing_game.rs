@@ -9,22 +9,32 @@ extern crate regex;
 mod guessing_game_lib;
 
 use regex::Regex;
+
 use guessing_game_lib::*;
 
 static ALLOWED_NUM_GUESSES: i32 = 3;
 
 fn ask_for_guess (re: &Regex) -> String {
     let mut guess = String::new();
+    let mut ind = 0;
     while !re.is_match(guess.as_str()) {
+        if ind > 0 {
+            println!("Only numbers allowed.");
+            guess.clear();
+        }
         println!("Please input your guess:");
-        guess.clear();
-        io::stdin().read_line(&mut guess)
-            .expect("Failed to read line");
+        match io::stdin().read_line(&mut guess) {
+            Err(e) => {
+                println!("Only numbers allowed.  Err: {:?}", e);
+            }
+            Ok(_) => ()
+        }
+        ind += 1;
     }
     guess
 }
 
-fn ask_play_again (yes_no_regex: &Regex) -> bool {
+fn ask_play_again () -> bool {
     let mut is_valid_rslt = false;
     let mut answer = String::new();
     let mut chr: char = ' ';
@@ -72,13 +82,8 @@ fn main () {
         Err(err) => panic!("{}", err),
         Ok(x) => x
     };
-    let _yes_no_regex: &Regex = &match regex::Regex::new(r"(?:y|n)") {
-        Err(err) => panic!("{}", err),
-        Ok(x) => x
-    };
     while quit_game == false {
         play_game(num_regex);
-        quit_game = !ask_play_again(_yes_no_regex);
+        quit_game = !ask_play_again();
     }
 }
-
