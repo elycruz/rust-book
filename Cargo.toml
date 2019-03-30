@@ -16,6 +16,10 @@ path = "src/chp2_00/guessing_game.rs"
 name = "chp5_00"
 path = "src/chp5_00/main.rs"
 
+[[bin]]
+name = "chp8_00"
+path = "src/chp8_00/main.rs"
+
 [dependencies]
 rand = "0.4.0"
 regex = "1"

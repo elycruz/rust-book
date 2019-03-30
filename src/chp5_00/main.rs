@@ -15,7 +15,7 @@ struct Rectangle {
 fn main () {
     let rect1 = Rectangle{x: 0, y: 0, w: 100, h: 100};
     let rect2 = Rectangle{x: 0, y: 0, w: 100, h: 100};
-    let rect2 = Rectangle{x: 0, y: 0, w: 100, h: 200};
+    let rect3 = Rectangle{x: 0, y: 0, w: 100, h: 200};
     let color = Color(0,0,0);
     let point = Point(0,0);
     println!("Rectangle {:?}", rect1);
@@ -23,10 +23,15 @@ fn main () {
     println!("Point {:?}", point);
     println!("\nRectangle area: {:?}", rect1.rect_area());
     println!("\nRect1 can contain rect2: {:?}", rect1.can_contain(&rect2));
-    println!("\nRect1 can contain rect2: {:?}", rect1.can_contain(&rect3));
+    println!("\nRect1 can contain rect3: {:?}", rect1.can_contain(&rect3));
+    println!("\n`Rectangle::square(34)`: {:?}", Rectangle::square(34));
 }
 
 impl Rectangle {
+    fn square (size: i32) -> Rectangle {
+        Rectangle{x: 0, y: 0, w: size, h: size}
+    }
+
     fn rect_area (&self) -> i32 {
         let out = (self.w - self.x) * (self.h - self.y);
         if out < 0 { out * -1 } else { out }
