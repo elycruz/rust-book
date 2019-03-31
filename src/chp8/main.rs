@@ -1,5 +1,7 @@
 use std::string::String;
 
+use std::fmt::Debug;
+
 fn main() {
     let one_to_ten = vec![1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
     print_in_vec(&one_to_ten);
@@ -40,7 +42,7 @@ fn get_chars_seq(a: char, b: char) -> String {
     return out;
 }
 
-fn maximum<T: Ord + std::fmt::Debug>(xs: &Vec<T>) -> Option<&T> {
+fn maximum<T: Ord + Debug>(xs: &Vec<T>) -> Option<&T> {
     if xs.len() == 0 {
         return None;
     }

@@ -9,16 +9,20 @@ name = "rust-book"
 path = "src/main.rs"
 
 [[bin]]
-name = "chp2_00"
-path = "src/chp2_00/guessing_game.rs"
+name = "chp2"
+path = "src/chp2/guessing_game.rs"
 
 [[bin]]
-name = "chp5_00"
-path = "src/chp5_00/main.rs"
+name = "chp5"
+path = "src/chp5/main.rs"
 
 [[bin]]
-name = "chp8_00"
-path = "src/chp8_00/main.rs"
+name = "chp8"
+path = "src/chp8/main.rs"
+
+[[bin]]
+name = "chp12"
+path = "src/chp12/main.rs"
 
 [dependencies]
 rand = "0.4.0"

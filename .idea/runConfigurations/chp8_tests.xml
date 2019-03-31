@@ -1,7 +1,7 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="chp8-tests" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
     <option name="channel" value="DEFAULT" />
-    <option name="command" value="test --bin chp8_00" />
+    <option name="command" value="test --bin chp8" />
     <option name="allFeatures" value="true" />
     <option name="nocapture" value="false" />
     <option name="backtrace" value="SHORT" />
