@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="27fb374e-f3b1-4fda-ba26-9b3299f1e1bd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/poem.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chp12/main.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chp12/minigrep.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/chp8_tests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/chp8_tests.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chp2_00/guessing_game.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/chp2/guessing_game.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chp2_00/guessing_game_lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/chp2/guessing_game_lib.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chp2_00/tests/test_guessing_game_lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/chp2/tests/test_guessing_game_lib.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chp5_00/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/chp5/main.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chp8_00/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/chp8/main.rs" afterDir="false" />
-    </list>
+    <list default="true" id="27fb374e-f3b1-4fda-ba26-9b3299f1e1bd" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -25,20 +13,45 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/chp12/main.rs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="551">
+            <state relative-caret-position="580">
               <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/chp12/minigrep.rs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+            <state relative-caret-position="203">
+              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+              <folding>
+                <element signature="e#0#12#0" />
+                <element signature="n#!!block;n#Config#0" />
+                <element signature="e#167#489#0" />
+                <element signature="e#183#200#0" />
+                <element signature="e#233#487#0" />
+                <element signature="e#325#379#0" />
+                <element signature="e#398#480#0" />
+                <element signature="e#508#540#0" />
+                <element signature="n#!!block;n#search#0" />
+                <element signature="e#629#708#0" />
+                <element signature="e#663#702#0" />
+                <element signature="e#754#786#0" />
+                <element signature="n#!!block;n#search_case_insensitive#0" />
+                <element signature="e#936#1027#0" />
+                <element signature="e#982#1021#0" />
+                <element signature="e#1049#1062#0" />
+                <element signature="n#!!block;n#run#0" />
+                <element signature="e#1202#1252#0" />
+                <element signature="e#1258#1325#0" />
+                <element signature="e#1348#1385#0" />
+                <element signature="n#tests#0" />
+                <element signature="n#!!block;n#test_one_result#0;n#tests#0" />
+                <element signature="n#!!block;n#test_case_insensitive#0;n#tests#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -140,6 +153,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -147,12 +162,21 @@
               <item name="rust-book" type="b2602c69:ProjectViewProjectNode" />
               <item name="rust-book" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="rust-book" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rust-book" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="rust-book" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rust-book" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="chp12" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -264,7 +288,7 @@
       <workItem from="1553962387742" duration="67000" />
       <workItem from="1553962474892" duration="12138000" />
       <workItem from="1553984167977" duration="5366000" />
-      <workItem from="1553989561685" duration="1602000" />
+      <workItem from="1553989561685" duration="2249000" />
     </task>
     <servers />
   </component>
@@ -301,13 +325,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66040000" />
+    <option name="totallyTimeSpent" value="66687000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1294" height="1407" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.24311183" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24311183" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="Designer" order="3" />
@@ -320,7 +344,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.46624804" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.46624804" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
@@ -460,17 +484,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/chp12/minigrep.rs">
+    <entry file="file://$PROJECT_DIR$/src/chp12/main.rs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+        <state relative-caret-position="580">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/chp12/main.rs">
+    <entry file="file://$PROJECT_DIR$/src/chp12/minigrep.rs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="203">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+          <folding>
+            <element signature="e#0#12#0" />
+            <element signature="n#!!block;n#Config#0" />
+            <element signature="e#167#489#0" />
+            <element signature="e#183#200#0" />
+            <element signature="e#233#487#0" />
+            <element signature="e#325#379#0" />
+            <element signature="e#398#480#0" />
+            <element signature="e#508#540#0" />
+            <element signature="n#!!block;n#search#0" />
+            <element signature="e#629#708#0" />
+            <element signature="e#663#702#0" />
+            <element signature="e#754#786#0" />
+            <element signature="n#!!block;n#search_case_insensitive#0" />
+            <element signature="e#936#1027#0" />
+            <element signature="e#982#1021#0" />
+            <element signature="e#1049#1062#0" />
+            <element signature="n#!!block;n#run#0" />
+            <element signature="e#1202#1252#0" />
+            <element signature="e#1258#1325#0" />
+            <element signature="e#1348#1385#0" />
+            <element signature="n#tests#0" />
+            <element signature="n#!!block;n#test_one_result#0;n#tests#0" />
+            <element signature="n#!!block;n#test_case_insensitive#0;n#tests#0" />
+          </folding>
         </state>
       </provider>
     </entry>
