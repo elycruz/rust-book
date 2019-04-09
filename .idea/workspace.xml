@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="27fb374e-f3b1-4fda-ba26-9b3299f1e1bd" name="Default Changelist" comment="" />
+    <list default="true" id="27fb374e-f3b1-4fda-ba26-9b3299f1e1bd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chp12/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/chp12/main.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chp12/minigrep.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/chp12/minigrep.rs" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -11,47 +15,26 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="testRunner" value="GRADLE" />
+    <option name="delegatedBuild" value="true" />
+  </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/chp12/main.rs">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/chp12/minigrep.rs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="580">
-              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+            <state relative-caret-position="161">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/chp12/minigrep.rs">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/chp12/main.rs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-              <folding>
-                <element signature="e#0#12#0" />
-                <element signature="n#!!block;n#Config#0" />
-                <element signature="e#167#489#0" />
-                <element signature="e#183#200#0" />
-                <element signature="e#233#487#0" />
-                <element signature="e#325#379#0" />
-                <element signature="e#398#480#0" />
-                <element signature="e#508#540#0" />
-                <element signature="n#!!block;n#search#0" />
-                <element signature="e#629#708#0" />
-                <element signature="e#663#702#0" />
-                <element signature="e#754#786#0" />
-                <element signature="n#!!block;n#search_case_insensitive#0" />
-                <element signature="e#936#1027#0" />
-                <element signature="e#982#1021#0" />
-                <element signature="e#1049#1062#0" />
-                <element signature="n#!!block;n#run#0" />
-                <element signature="e#1202#1252#0" />
-                <element signature="e#1258#1325#0" />
-                <element signature="e#1348#1385#0" />
-                <element signature="n#tests#0" />
-                <element signature="n#!!block;n#test_one_result#0;n#tests#0" />
-                <element signature="n#!!block;n#test_case_insensitive#0;n#tests#0" />
-              </folding>
+            <state relative-caret-position="224">
+              <caret line="8" column="23" lean-forward="true" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -135,18 +118,18 @@
         <option value="$PROJECT_DIR$/src/chp12/poem" />
         <option value="$PROJECT_DIR$/src/chp12/lib.rs" />
         <option value="$PROJECT_DIR$/src/chp12/minigrep/mod.rs" />
-        <option value="$PROJECT_DIR$/src/chp12/minigrep.rs" />
         <option value="$PROJECT_DIR$/src/chp12/main.rs" />
+        <option value="$PROJECT_DIR$/src/chp12/minigrep.rs" />
       </list>
     </option>
   </component>
   <component name="PhpServers">
     <servers />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-7" />
-    <option name="width" value="1294" />
-    <option name="height" value="1407" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-10" />
+    <option name="width" value="1295" />
+    <option name="height" value="1410" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -154,7 +137,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -177,11 +159,13 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../rs-fib" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -209,7 +193,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Cargo Command.Test minigrep::tests::test_case_insensitive">
+  <component name="RunManager" selected="Cargo Command.Run chp12">
     <configuration name="Run chp12" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
       <option name="channel" value="DEFAULT" />
       <option name="command" value="run --package rust-book --bin chp12" />
@@ -250,18 +234,8 @@
       <envs />
       <method v="2" />
     </configuration>
-    <list>
-      <item itemvalue="Cargo Command.chp8-tests" />
-      <item itemvalue="Cargo Command.Run chp12" />
-      <item itemvalue="Cargo Command.Test minigrep::tests" />
-      <item itemvalue="Cargo Command.Test minigrep" />
-      <item itemvalue="Cargo Command.Test minigrep::tests::test_case_insensitive" />
-    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Cargo Command.Test minigrep::tests::test_case_insensitive" />
-        <item itemvalue="Cargo Command.Test minigrep" />
-        <item itemvalue="Cargo Command.Test minigrep::tests" />
         <item itemvalue="Cargo Command.Run chp12" />
       </list>
     </recent_temporary>
@@ -289,13 +263,14 @@
       <workItem from="1553962474892" duration="12138000" />
       <workItem from="1553984167977" duration="5366000" />
       <workItem from="1553989561685" duration="2249000" />
+      <workItem from="1554065701270" duration="909000" />
+      <workItem from="1554476979740" duration="253000" />
+      <workItem from="1554525303872" duration="785000" />
+      <workItem from="1554784872455" duration="1792000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="chp8-tests - 2019.03.30 at 15h 14m 27s.xml">
-      <configuration name="chp8-tests" configurationId="CargoCommandRunConfiguration" />
-    </history-entry>
     <history-entry file="chp8-tests - 2019.03.30 at 15h 14m 38s.xml">
       <configuration name="chp8-tests" configurationId="CargoCommandRunConfiguration" />
     </history-entry>
@@ -323,28 +298,34 @@
     <history-entry file="Test_minigrep__tests__test_case_insensitive - 2019.03.30 at 20h 05m 31s.xml">
       <configuration name="Test minigrep::tests::test_case_insensitive" configurationId="CargoCommandRunConfiguration" />
     </history-entry>
+    <history-entry file="chp8-tests - 2019.04.09 at 01h 14m 33s.xml">
+      <configuration name="chp8-tests" configurationId="CargoCommandRunConfiguration" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66687000" />
+    <option name="totallyTimeSpent" value="70440000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1294" height="1407" extended-state="0" />
+    <frame x="-7" y="-7" width="2062" height="1126" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24311183" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25274727" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="Designer" order="3" />
+      <window_info id="Image Layers" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="UI Designer" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3292683" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32967034" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32897383" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.46624804" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.46579477" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
@@ -354,12 +335,19 @@
       <window_info anchor="right" id="Cargo" order="3" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info anchor="right" id="Database" order="5" />
+      <window_info anchor="right" id="Maven" order="6" />
+      <window_info anchor="right" id="Palette" order="7" />
+      <window_info anchor="right" id="Capture Analysis" order="8" />
+      <window_info anchor="right" id="Theme Preview" order="9" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24311183" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info id="Designer" order="3" />
+      <window_info id="Image Layers" order="0" />
+      <window_info id="Capture Tool" order="1" />
+      <window_info id="UI Designer" order="2" />
+      <window_info content_ui="combo" id="Project" order="3" weight="0.24795082" />
+      <window_info id="Structure" order="4" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info id="Designer" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3292683" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32967034" />
@@ -369,16 +357,20 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.46624804" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.46579477" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Cargo" order="3" />
-      <window_info anchor="right" id="Palette&#9;" order="4" />
-      <window_info anchor="right" id="Database" order="5" />
+      <window_info anchor="right" id="Maven" order="0" />
+      <window_info anchor="right" id="Palette" order="1" />
+      <window_info anchor="right" id="Theme Preview" order="2" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="right" id="Commander" order="4" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="5" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="6" weight="0.25" />
+      <window_info anchor="right" id="Cargo" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="Database" order="9" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -486,40 +478,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/chp12/main.rs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="224">
+          <caret line="8" column="23" lean-forward="true" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/chp12/minigrep.rs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-          <folding>
-            <element signature="e#0#12#0" />
-            <element signature="n#!!block;n#Config#0" />
-            <element signature="e#167#489#0" />
-            <element signature="e#183#200#0" />
-            <element signature="e#233#487#0" />
-            <element signature="e#325#379#0" />
-            <element signature="e#398#480#0" />
-            <element signature="e#508#540#0" />
-            <element signature="n#!!block;n#search#0" />
-            <element signature="e#629#708#0" />
-            <element signature="e#663#702#0" />
-            <element signature="e#754#786#0" />
-            <element signature="n#!!block;n#search_case_insensitive#0" />
-            <element signature="e#936#1027#0" />
-            <element signature="e#982#1021#0" />
-            <element signature="e#1049#1062#0" />
-            <element signature="n#!!block;n#run#0" />
-            <element signature="e#1202#1252#0" />
-            <element signature="e#1258#1325#0" />
-            <element signature="e#1348#1385#0" />
-            <element signature="n#tests#0" />
-            <element signature="n#!!block;n#test_one_result#0;n#tests#0" />
-            <element signature="n#!!block;n#test_case_insensitive#0;n#tests#0" />
-          </folding>
+        <state relative-caret-position="161">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>

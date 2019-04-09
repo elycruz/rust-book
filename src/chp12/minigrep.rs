@@ -9,35 +9,37 @@ pub struct Config {
 }
 
 impl Config {
-    pub fn new(args: &[String]) -> Result<Config, &'static str> {
-        let _case_ins = !env::var("CASE_INSENSITIVE").is_err();
+    pub fn new(mut args: std::env::Args) -> Result<Config, &'static str> {
         if args.len() < 3 {
             return Err("Not enough args");
         }
-        Ok(Config { query: args[1].clone(), file_path: args[2].clone(), case_insensitve: _case_ins })
+        args.next();
+        let case_insensitve = !env::var("CASE_INSENSITIVE").is_err();
+        let query = match args.next() {
+            Some(arg) => arg,
+            None => return Err("`query` string required.")
+        };
+        let file_path = match args.next() {
+            Some(x) => x,
+            None => return Err("`file_path` required.")
+        };
+
+        Ok(Config { query, file_path, case_insensitve })
     }
 }
 
 pub fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
-    let mut out: Vec<&str> = vec![];
-    for line in contents.lines() {
-        if line.contains(query) {
-            out.push(line);
-        }
-    }
-    out
+    contents.lines()
+        .filter(|line| line.contains(query))
+        .collect()
 }
 
 pub fn search_case_insensitive<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
-    let mut out: Vec<&str> = vec![];
     let _q = query.to_lowercase();
     let _q = _q.as_str();
-    for line in contents.lines() {
-        if line.to_lowercase().contains(_q) {
-            out.push(line);
-        }
-    }
-    out
+    contents.lines()
+        .filter(|line| line.to_lowercase().contains(_q))
+        .collect()
 }
 
 pub fn run(cfg: Config) -> Result<(), Box<dyn Error>> {
