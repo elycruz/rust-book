@@ -1,3 +1,5 @@
+// Temperatures math reference: https://www.mathsisfun.com/temperature-conversion.html
+
 fn to_farenheit<T>(x: T) -> f32 {
     f32(x) - 32.0 * 5.0 / 9.0
 }
