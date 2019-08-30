@@ -22,5 +22,5 @@ pub fn yes_no_to_bool(c: char) -> bool {
 
 pub fn normalize_num_guess(g: String) -> i32 {
     let num: i32 = g.trim().parse().expect("Please enter a number:");
-    return num;
+    return num
 }
