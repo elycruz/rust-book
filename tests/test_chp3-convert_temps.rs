@@ -1,19 +1,6 @@
-// Temperatures math reference: https://www.mathsisfun.com/temperature-conversion.html
-
-fn to_farenheit<T>(x: T) -> f32 {
-    f32(x) - 32.0 * 5.0 / 9.0
-}
-
-fn to_celsius<T>(x: T) -> f32 {
-    f32(x) * 9.0 / 5.0 + 5.0
-}
+use super::chp3::convert_temps;
 
 mod test {
-    struct TestCase {
-        cel: f32,
-        faren: f32,
-    }
-
     // [(Celsius, Farenheit)]
     const testCases: Vec<(f32, f32)> = vec![
         (180.0, 356.0), //  Moderate Oven
@@ -28,7 +15,19 @@ mod test {
         (-40.0, -40.0),
     ];
 
-    fn test_to_farenheit() {}
+    fn test_it_works() {
+        assert_eq!(1, 1);
+    }
 
-    fn test_to_celsius() {}
+    fn test_to_farenheit() {
+        for (cels, faren) in testCases.iter() {
+            assert_eq!(convert_temps::to_farenheit(cels), faren);
+        }
+    }
+
+    fn test_to_celsius() {
+        for (cels, faren) in testCases.iter() {
+            assert_eq!(convert_temps::to_celsius(faren), cels);
+        }
+    }
 }
