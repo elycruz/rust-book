@@ -18,7 +18,7 @@ fn ask_for_guess (re: &Regex) -> String {
     let mut guess = String::new();
     let mut ind = 0;
     while !re.is_match(guess.as_str()) {
-        if ind > 0 {
+        if ind > 0 { // if asked for guess and regex match failed ...
             println!("Only numbers allowed.");
             guess.clear();
         }
@@ -31,7 +31,7 @@ fn ask_for_guess (re: &Regex) -> String {
         }
         ind += 1;
     }
-    guess
+    return guess;
 }
 
 fn ask_play_again () -> bool {
@@ -62,7 +62,7 @@ fn play_game(num_regex: &Regex) {
     println!("Guess the number (between 0-9):");
     let mut remaining_num_guesses: i32 = ALLOWED_NUM_GUESSES;
     let secret_num: i32 = rand::thread_rng().gen_range(0, 9);
-    let mut is_correct_guess: bool = false;
+    let mut is_correct_guess = false;
     while is_correct_guess == false && remaining_num_guesses > 0 {
         let guess: i32 = get_guess(num_regex);
         let (guess_bln, guess_msg) = match guess.cmp(&secret_num) {
@@ -74,11 +74,14 @@ fn play_game(num_regex: &Regex) {
         is_correct_guess = guess_bln;
         println!("{}", guess_msg);
     }
+    if !is_correct_guess {
+        println!("Aww, better luck next time!");
+    }
 }
 
 fn main () {
     let mut quit_game = false;
-    let num_regex: &Regex = &match regex::Regex::new(r"\d{1,3}") {
+    let num_regex: &Regex = &match regex::Regex::new(r"\d{1,3}") { // only upto '999'
         Err(err) => panic!("{}", err),
         Ok(x) => x
     };

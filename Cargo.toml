@@ -1,5 +1,5 @@
 [package]
-name = "chp2"
+name = "rust-book"
 version = "0.1.0"
 authors = ["Ely De La Cruz <elycruz@elycruz.com>"]
 edition = "2018"
@@ -8,3 +8,16 @@ edition = "2018"
 
 [dependencies]
 regex = "1.2.1"
+rand = "0.7.0"
+
+[[bin]]
+name="chp1"
+path="./chp1/main.rs"
+
+[[bin]]
+name="chp2-guessing-game"
+path="./chp2/guessing_game.rs"
+
+[[bin]]
+name="chp3-convert_temps"
+path="./chp3/convert_temps.rs"
