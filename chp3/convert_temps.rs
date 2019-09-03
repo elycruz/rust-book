@@ -16,10 +16,10 @@ pub fn get_test_cases() -> Vec<(f32, f32)> {
         (40.0, 104.0),
         (37.0, 98.6),
         (30.0, 86.0),
-//        (21.0, 70.0),   // estimated number
+        // (21.0, 70.0),   // estimated number
         (10.0, 50.0),
         (0.0, 32.0),
-//        (-18.0, 0.0),   // estimated number
+        // (-18.0, 0.0),   // estimated number
         (-40.0, -40.0),
     ]
 }
