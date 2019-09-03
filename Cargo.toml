@@ -27,3 +27,7 @@ path="./chp3/convert_temps.rs"
 name="chp3-nth_fib"
 path="./chp3/nth_fib.rs"
 
+[[bin]]
+name="chp3-fib"
+path="./chp3/fib.rs"
+

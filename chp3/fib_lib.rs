@@ -9,7 +9,7 @@ static O_FIVE: f64 = 0.5;
 // Phi, can also be expressed all in fives as below
 // 5 ^ .5 * .5 + .5 = Φ
 // (this is what we're doing below):
-pub fn get_phi () -> f64 {
+fn get_phi () -> f64 {
     FIVE_O.powf(O_FIVE) * O_FIVE + O_FIVE
 }
 
