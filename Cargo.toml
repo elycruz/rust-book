@@ -9,6 +9,7 @@ edition = "2018"
 [dependencies]
 regex = "1.2.1"
 rand = "0.7.0"
+clap = "2.33.0"
 
 [[bin]]
 name="chp1"
@@ -21,4 +22,8 @@ path="./chp2/guessing_game.rs"
 [[bin]]
 name="chp3-convert_temps"
 path="./chp3/convert_temps.rs"
+
+[[bin]]
+name="chp3-nth_fib"
+path="./chp3/nth_fib.rs"
 
