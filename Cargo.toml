@@ -21,3 +21,4 @@ path="./chp2/guessing_game.rs"
 [[bin]]
 name="chp3-convert_temps"
 path="./chp3/convert_temps.rs"
+
