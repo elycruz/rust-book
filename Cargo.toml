@@ -31,3 +31,8 @@ path="./chp3/nth_fib.rs"
 name="chp3-fib"
 path="./chp3/fib.rs"
 
+
+[[bin]]
+name="chp3-twelve_days_of_christmas"
+path="./chp3/twelve_days_of_christmas.rs"
+
