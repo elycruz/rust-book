@@ -34,3 +34,15 @@ path="./chp3/fib.rs"
 [[bin]]
 name="chp3-twelve_days"
 path="./chp3/twelve_days_of_christmas.rs"
+
+[[bin]]
+name="chp8"
+path="./chp8/main.rs"
+
+[[bin]]
+name="chp8-mean-mode"
+path="./chp8/mean_and_mode.rs"
+
+[[bin]]
+name="chp12-minigrep"
+path="./chp12/main.rs"
