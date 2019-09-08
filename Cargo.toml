@@ -20,19 +20,17 @@ name="chp2-guessing-game"
 path="./chp2/guessing_game.rs"
 
 [[bin]]
-name="chp3-convert_temps"
+name="chp3-convert-temps"
 path="./chp3/convert_temps.rs"
 
 [[bin]]
-name="chp3-nth_fib"
+name="chp3-nth-fib"
 path="./chp3/nth_fib.rs"
 
 [[bin]]
 name="chp3-fib"
 path="./chp3/fib.rs"
 
-
 [[bin]]
-name="chp3-twelve_days_of_christmas"
+name="chp3-twelve_days"
 path="./chp3/twelve_days_of_christmas.rs"
-

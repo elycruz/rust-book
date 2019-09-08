@@ -47,27 +47,25 @@ fn main() {
         let mut i: usize = items_for_day_len;
 
         // If more than one item for day
-        if i > 1 {
-            // Loop through items and capitalize the first one and add "and " to last one.
-            for line in items_for_day {
-                i -= 1;
-                if i == items_for_day_len - 1 {
-                    println!("{:}", ucase_first(*line));
-                }
-                else if i == 0 {
-                    println!("and {:}", line);
-                }
-                else {
-                    println!("{:}", line);
-                }
-            }
-
-            // Print last line again if final day
-            if items_for_day_len == 12 {
-                println!("and {:}", items_for_day[items_for_day_len - 1])
-            }
-        } else {
+        if i <= 1 {
             println!("{:}", ucase_first(items_for_day[0]));
+            continue;
+        }
+        // Loop through items and capitalize the first one and add "and " to last one.
+        for line in items_for_day {
+            i -= 1;
+            if i == items_for_day_len - 1 {
+                println!("{:}", ucase_first(*line));
+            } else if i == 0 {
+                println!("and {:}", line);
+            } else {
+                println!("{:}", line);
+            }
+        }
+
+        // Print last line again if final day
+        if items_for_day_len == 12 {
+            println!("and {:}", items_for_day[items_for_day_len - 1])
         }
     }
 }
