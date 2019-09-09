@@ -31,7 +31,7 @@ fn ask_for_guess (re: &Regex) -> String {
         }
         ind += 1;
     }
-    return guess;
+    return guess
 }
 
 fn ask_play_again () -> bool {
