@@ -1,3 +1,10 @@
+/**
+ * Convert strings to pig latin.
+ * The first consonant of each word is moved to the end of the word and “ay” is added, so “first” becomes “irst-fay”.
+ * Words that start with a vowel have “hay” added to the end instead (“apple” becomes “apple-hay”).
+ * Keep in mind the details about UTF-8 encoding!
+ */
+
 use std::env;
 use std::process;
 
@@ -8,7 +15,7 @@ const CONSONANTS: &str = "bcdfghjklmnpqrstvwxyz";
 //    let start = u32::from('a');
 //    let end = u32::from('z');
 //    let mut i = start;
-//    let mut out = String::from("");
+//    let mut out = String::new();
 //    while i <= end {
 //        let new_char = match std::char::from_u32(i) {
 //            Some(x) => x,
@@ -23,13 +30,7 @@ const CONSONANTS: &str = "bcdfghjklmnpqrstvwxyz";
 //    return &out;
 //}
 
-/**
- * Convert strings to pig latin.
- * The first consonant of each word is moved to the end of the word and “ay” is added, so “first” becomes “irst-fay”.
- * Words that start with a vowel have “hay” added to the end instead (“apple” becomes “apple-hay”).
- * Keep in mind the details about UTF-8 encoding!
- */
-fn word_to_piglatin<'a>(s: &str) -> String {
+fn word_to_piglatin(s: &str) -> String {
     if s.len() == 0 {
         return s.to_string();
     }
@@ -37,7 +38,7 @@ fn word_to_piglatin<'a>(s: &str) -> String {
         Some(x) => x,
         _ => panic!("Unable to get first char on non empty &str")
     };
-    let mut out: String = String::from("");
+    let mut out = String::new();
     for c in VOWELS.chars() {
         if c == c0 {
             out.push_str(s);
@@ -56,22 +57,34 @@ fn word_to_piglatin<'a>(s: &str) -> String {
     return s.to_string();
 }
 
-fn line_to_piglatin(line: &str) -> &str {
+fn line_to_piglatin(line: &str) -> String {
+    let mut out = String::new();
     let words: Vec<&str> = line.split(' ').collect();
-    let mut out: Vec<&str> = vec![];
-    for word in words {
-        let transformed_word = word_to_piglatin(word);
-        out.push(transformed_word.as_str());
+    let limit: usize = words.len() - 1;
+    let mut i: usize = 0;
+    for word in words  {
+        out.push_str(word_to_piglatin(word).as_str());
+        if i < limit {
+            out.push(' ');
+        }
+        i += 1;
     }
-    return out.join(" ").as_str();
+    return out;
 }
 
-fn lines_to_piglatin(lines: Vec<&str>) -> &str {
-    let mut out: String = String::from("");
+fn text_to_piglatin(text: &str) -> String {
+    let mut out= String::new();
+    let lines: Vec<&str> = text.lines().collect();
+    let limit: usize = lines.len() - 1;
+    let mut i: usize = 0;
     for line in lines {
-        out.push_str(line_to_piglatin(line));
+        out.push_str(line_to_piglatin(line).as_str());
+        if i < limit {
+            out.push('\n');
+        }
+        i += 1;
     }
-    return &out;
+    return out;
 }
 
 fn main() {
@@ -90,15 +103,54 @@ fn main() {
         }
     };
 
-    let split_text: Vec<&str> = text.split(' ').collect();
-    println!("{:?}", lines_to_piglatin(split_text));
+    println!("{:?}", text_to_piglatin(&text));
 }
 
 #[cfg(test)]
 mod test {
-    #[test]
-    fn test_word_to_piglatin() {}
+    use crate::{word_to_piglatin, line_to_piglatin, text_to_piglatin};
 
     #[test]
-    fn test_line_to_piglatin() {}
+    fn test_word_to_piglatin() {
+        for (control, expected) in vec![
+            ("hello", "ellohay"),
+            ("abc", "abchay"),
+            ("road", "oadray"),
+            ("first", "irstfay")
+        ] {
+            println!("word_to_piglatin({:?})", control);
+            let result = word_to_piglatin(control);
+            assert_eq!(result.as_str(), expected);
+        }
+    }
+
+    #[test]
+    fn test_line_to_piglatin() {
+        for (control, expected) in vec![
+            ("hello", "ellohay"),
+            ("hello world", "ellohay orldway"),
+            ("abc today", "abchay odaytay"),
+            ("all your base are belong to us", "allhay ouryay asebay arehay elongbay otay ushay"),
+        ] {
+            println!("line_to_piglatin({:?})", control);
+            let result = line_to_piglatin(control);
+            assert_eq!(result.as_str(), expected);
+        }
+    }
+
+    #[test]
+    fn test_to_piglatin() {
+        for (control, expected) in vec![
+            ("hello", "ellohay"),
+            ("hello world", "ellohay orldway"),
+            ("abc today", "abchay odaytay"),
+            ("abc\n today", "abchay\n odaytay"),
+            ("all your base are belong to us", "allhay ouryay asebay arehay elongbay otay ushay"),
+            ("all your\n base are\n belong to us", "allhay ouryay\n asebay arehay\n elongbay otay ushay"),
+        ] {
+            println!("text_to_piglatin({:?})", control);
+            let result = text_to_piglatin(control);
+            assert_eq!(result.as_str(), expected);
+        }
+    }
 }
