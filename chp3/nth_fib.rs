@@ -1,7 +1,7 @@
 use std::env;
 use std::process;
 
-mod fib_lib;
+pub mod fib_lib;
 
 use fib_lib::nth_fib;
 

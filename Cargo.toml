@@ -48,5 +48,9 @@ name="chp8-piglatin"
 path="./chp8/piglatin.rs"
 
 [[bin]]
+name="chp8-company-directory"
+path="./chp8/company_directory.rs"
+
+[[bin]]
 name="chp12-minigrep"
 path="./chp12/main.rs"
