@@ -9,7 +9,18 @@ type Employee = String;
 
 type Listings = HashMap<Department, HashSet<Employee>>;
 
-const PROMPT: &str = "$:directory>";
+enum Command {
+    ADD,
+    LIST,
+    HELP,
+    COMMANDS,
+    EXIT,
+    UNKNOWN
+}
+
+use Command::*;
+
+const PROGRAM_PROMPT: &str = "$:directory>";
 
 #[derive(Debug)]
 struct Directory {
@@ -31,10 +42,10 @@ fn prompt_for_input_and_extract(rx: &Regex) -> Vec<String> {
     let mut ind = 0;
     while !rx.is_match(input.trim()) {
         if ind > 0 { // if asked for input and regex match failed ...
-            println!("Wrong command format.  Should be `cmd [...args]`.");
+            println!("Wrong command format.  Expected `cmd [...args]`\n  (entire call should match `{:?}`).", rx);
             input.clear();
         }
-        println!("\n{:}", PROMPT);
+        println!("\n{:}", PROGRAM_PROMPT);
         match io::stdin().read_line(&mut input) {
             Err(e) => {
                 println!("Command error: {:?}", e);
@@ -52,59 +63,104 @@ fn prompt_for_input_and_extract(rx: &Regex) -> Vec<String> {
     args
 }
 
+fn hashset_to_vec(hs: &HashSet<String>) -> Vec<String> {
+    let mut out: Vec<String> = vec![];
+    for s in hs.iter() {
+        out.push(s.clone());
+    }
+    return out;
+}
+
 fn main() {
-    let cmd_rx: Regex = regex::Regex::new(r"^(add|exit|list)(\s*[A-Za-z_]{2,55})+$").unwrap();
+    let mut cmds_map: HashMap<String, Command> = HashMap::new();
+    cmds_map.insert("add".to_string(), ADD);
+    cmds_map.insert("list".to_string(), LIST);
+    cmds_map.insert("help".to_string(), HELP);
+    cmds_map.insert("commands".to_string(), COMMANDS);
+    cmds_map.insert("exit".to_string(), EXIT);
+
+    let cmd_rx: Regex = regex::Regex::new(r"^([a-zA-Z][a-zA-Z_\-\d]{1,55})(\s*[A-Za-z][A-Za-z_\-\d]{1,55})*$").unwrap();
+
     let mut directory: Directory = Directory::new();
     let mut quit = false;
+
     loop {
         let args = prompt_for_input_and_extract(&cmd_rx);
         if args.len() == 0 {
             println!("No command given.  Doing nothing.");
             continue;
         }
-        match args[0].as_str() {
-            "add" => {
+        let cmd_key = args[0].as_str();
+        let cmd = match cmds_map.get(cmd_key) {
+            Some(c) => c,
+            _ => &UNKNOWN
+        };
+
+        match cmd {
+            ADD => {
                 if args.len() < 3 {
-                    println!("Unable to run 'add' command.  Need more args.  Received: {:?}", args);
-                } else {
-                    add_dept_emp(args[2].as_str(), args[1].as_str(), &mut directory);
-                    println!("{:?}", directory);
+                    println!("Unable to run '{:}' command.\n  \
+                        Requires 3 arguments `cmd`, `person`, `department`.\n  \
+                        Received {:?} args: {:?}", cmd_key, args.len(), args
+                    );
+                    continue;
                 }
+                add_dept_emp(args[2].as_str(), args[1].as_str(), &mut directory);
             }
-            "list" => {
-                match args.len() {
-                    2 => {
-                        let dept = &args[1];
-                        if directory.listings.contains_key(dept) {
-                            // @todo list people for given department (alphabetically)
-                            println!("Employees in \"{:}\" department:", dept);
-                            let mut es: Vec<String> = vec![];
-                            let emps = directory.listings.get(dept).unwrap();
-                            for e in emps {
-                                es.push(e.clone());
-                            }
-                            es.sort();
-                            for e in es {
-                                println!("- {:}", e);
-                            }
-                        } else {
-                            println!("\"{:}\" department not found.", args[1]);
+            // @todo dry up logic here or move commands/actions to separate methods
+            LIST => match args.len() {
+                2 => {                              // List employees in given dept
+                    let dept = &args[1];
+                    if !directory.listings.contains_key(dept) {
+                        println!("\"{:}\" department not found.", args[1]);
+                        continue;
+                    }
+                    println!("\n\"{:}\" department:", dept);
+                    let mut es: Vec<String> = hashset_to_vec(directory.listings.get(dept).unwrap());
+                    es.sort();
+                    for e in es {
+                        println!("- {:}", e);
+                    }
+                }
+                _ => {                              // List all employees by department
+                    let mut depts = hashset_to_vec(&directory.departments);
+                    if depts.len() == 0 {
+                        println!("No entries found.");
+                        continue;
+                    }
+                    depts.sort();
+                    for d in depts {
+                        println!("\n\"{:}\" department:", d);
+                        let mut es: Vec<String> = hashset_to_vec(directory.listings.get(&d).unwrap());
+                        es.sort();
+                        for e in es {
+                            println!("- {:}", e);
                         }
                     }
-                    _ => {
-                        // @todo list all persons in all depts alphabetically
-                    }
                 }
             }
-            "exit" => {
+            HELP => {
+                println!("\nAvailable commands:");
+                for c in cmds_map.keys() {
+                    print!("{:}, ", c);
+                }
+                println!("\n");
+            }
+            COMMANDS => {
+                println!("\nAvailable commands:");
+                for c in cmds_map.keys() {
+                    print!("{:}, ", c);
+                }
+                println!("\n");
+            }
+            EXIT => {
                 quit = true
             }
-            _ => {
-                println!("No command found.  Doing nothing");
+            UNKNOWN => {
+                println!("Command \"{:}\" not found.", cmd_key);
             }
         }
-        if
-        quit {
+        if quit {
             break;
         }
     }
