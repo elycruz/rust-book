@@ -79,6 +79,7 @@ fn main() {
     cmds_map.insert("commands".to_string(), COMMANDS);
     cmds_map.insert("exit".to_string(), EXIT);
 
+    // One or more slugs/words
     let cmd_rx: Regex = regex::Regex::new(r"^([a-zA-Z][a-zA-Z_\-\d]{1,55})(\s*[A-Za-z][A-Za-z_\-\d]{1,55})*$").unwrap();
 
     let mut directory: Directory = Directory::new();

@@ -54,3 +54,7 @@ path="./chp8/company_directory.rs"
 [[bin]]
 name="chp12-minigrep"
 path="./chp12/main.rs"
+
+[[bin]]
+name="chp16_1"
+path="chp16/chp16_1.rs"
