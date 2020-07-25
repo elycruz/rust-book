@@ -58,3 +58,7 @@ path="./chp12/main.rs"
 [[bin]]
 name="chp16_1"
 path="chp16/chp16_1.rs"
+
+[[bin]]
+name="chp16_2"
+path="chp16/chp16_2.rs"
